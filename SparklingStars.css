@@ -1,0 +1,59 @@
+/* sparkling stars */
+/*******************/
+@-webkit-keyframes comeInOut {
+    0% { transform: scale(0); }
+    50% { transform: scale(1); }
+    100% { transform: scale(0); }
+}
+@-moz-keyframes comeInOut {
+    0% { transform: scale(0); }
+    50% { transform: scale(1); }
+    100% { transform: scale(0); }
+}
+@-o-keyframes comeInOut {
+    0% { transform: scale(0); }
+    50% { transform: scale(1); }
+    100% { transform: scale(0); }
+}
+@keyframes comeInOut {
+    0% { transform: scale(0); }
+    50% { transform: scale(1); }
+    100% { transform: scale(0); }
+}
+
+@-webkit-keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(180deg); }
+}
+@-moz-keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(180deg); }
+}
+@-o-keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(180deg); }
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(180deg); }
+}
+
+.sparkling {
+    position: relative;
+    display: inline-block;
+    z-index: 0;
+    font-weight: bold;
+    color: #FFC700;
+}
+
+.sparkling > span {
+    z-index: -1;
+    position: absolute;
+    display: block;
+    animation: comeInOut 700ms forwards;
+}
+
+.sparkling > span > svg {
+    display: block;
+    animation: spin 1000ms linear;
+}
